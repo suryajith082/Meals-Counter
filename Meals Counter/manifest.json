@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Lunch Count",
+  "version": "1.0",
+  "description": "A simple form-filling Chrome extension for lunch count",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "alarms",
+    "notifications"   
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/pngtree-english-breakfast-featured-fried-eggs-sausages-soybeans-and-tomatoes-png-image_788332.jpg"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

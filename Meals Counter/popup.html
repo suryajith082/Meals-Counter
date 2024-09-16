@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daily Alert Form</title>
+  <style>
+    body {
+      width: 250px;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    select, input, textarea {
+      width: 100%;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 10px;
+      width: 100%;
+    }
+    #nameForm, #alertForm {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h3 id="title">Daily Alert Form</h3>
+  <form id="nameForm">
+    <label for="name">Enter your name</label>
+    <input type="text" id="name" required>
+    <button type="submit">Save Name</button>
+  </form>
+  <form id="alertForm">
+    <label for="meal">Meal Option</label>
+    <select id="meal" required>
+      <option value="Veg">Veg</option>
+      <option value="Non Veg">Non-Veg</option>
+    </select>
+    
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate" required>
+    
+    <label for="endDate">End Date</label>
+    <input type="date" id="endDate" required>
+    
+    <label for="mood">Previous Food review</label>
+    <select id="mood" required>
+      <option value="Good">Good</option>
+      <option value="Bad">Bad</option>
+    </select>
+    
+    <label for="comments">comments</label>
+    <textarea id="comments"></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
